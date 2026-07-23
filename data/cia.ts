@@ -1,0 +1,76 @@
+import { createSchool, googleMaps } from "./create-school";
+
+// 출처: cebucia.com (공식), 웹 조사 2026-07
+export const cia = createSchool({
+  id: "cia",
+  name: "Cebu International Academy",
+  shortName: "CIA",
+  initials: "CI",
+  color: "#e8e0f8",
+  tone: "#7055a6",
+  location: "막탄",
+  area: "Lapu-Lapu City",
+  address: "CIA Building, Vistamar Avenue, Sitio Dapdap, Barangay Mactan, Lapu-Lapu City, Cebu 6015",
+  schoolType: "Semi Sparta+",
+  established: 2003,
+  currentCampusOpened: 2022,
+  capacity: 600,
+  teachers: 300,
+  slogan: "Gateway to the West",
+  heroSummary: "세부를 대표하는 프리미엄 리조트형 어학원. IELTS와 Cambridge 기반 교육, 최신 시설을 모두 갖춘 대형 캠퍼스.",
+  overview: "2003년 설립, 2022년 막탄 신캠퍼스 개장. ESL부터 IELTS까지 폭넓은 과정을 운영하는 세미 스파르타 플러스 어학원. 공식 IDP IELTS 시험센터 운영.",
+  officialWebsite: "https://www.cebucia.com",
+  googleMapsUrl: googleMaps("Cebu International Academy, Vistamar Avenue, Mactan, Lapu-Lapu City"),
+
+  estimatedMonthlyCost: null,
+  speaking: 4.8,
+  ielts: 5,
+  facilities: 5,
+  food: 4.7,
+  freedom: 4.5,
+  nationality: 4.9,
+  value: 4.6,
+
+  oneToOne: 4,
+  groupClass: 4,
+  curfew: "세미 스파르타+ (평일 외출 제한, 주말 자유)",
+  classStructure: { oneToOne: "4 Classes", smallGroup: "2 Classes", mediumGroup: "1 Class", largeGroup: "1 Class" },
+  ieltsProgram: { oneToOne: 4, clinic: 2, grammar: 1, vocabulary: 1 },
+  programs: ["Cambridge ESL", "Regular ESL", "Intensive ESL", "IELTS", "TOEIC", "Business English", "Working Holiday", "Family Program", "Junior Camp"],
+
+  roomTypes: ["Single", "Twin", "Triple", "Quad", "Suite"],
+  roomFeatures: ["Wi-Fi", "Air Conditioner", "Refrigerator", "Safety Box", "Closet", "Hot Shower", "Desk", "Hair Dryer", "Balcony"],
+  coupleFriendly: true,
+  accommodationSummary: "모든 기숙사는 온캠퍼스 형태이며 Single부터 Suite까지 객실 유형을 운영.",
+
+  facilitiesList: ["Outdoor Swimming Pool", "Gym", "Library", "Study Hall", "IDP IELTS Center", "Dining Hall", "Recreation Room", "Basketball Court", "Volleyball Court", "Garden", "Mini Mart", "Prayer Room", "Karaoke Room", "Nurse Station"],
+  facilitiesSummary: "대형 수영장, 체육관, 도서관, 스터디홀과 공식 IDP IELTS 시험센터를 갖춘 리조트형 캠퍼스.",
+  foodSummary: "국제식 뷔페 형태의 식단을 제공하며 일반식과 할랄 식단을 함께 운영.",
+  nationalitySummary: "일본·중국·한국 비중이 높고 대만·베트남·태국·중동 등 다양한 국적이 재학. 비한국권 비율이 절반 이상.",
+  nationalityBreakdown: { japan: "34%", china: "25%", korea: "20%", taiwan: "Medium", vietnam: "Medium", thailand: "Low" },
+  transportationSummary: "공항 약 15~20분 · SM City 약 30분 · Ayala 약 35~40분 · IT Park 약 40분",
+  internetSummary: "캠퍼스 전역 Wi-Fi 제공",
+
+  strengths: ["2022년 신축 캠퍼스", "4성급 리조트형 시설", "공식 IDP IELTS 시험센터", "Cambridge 인증", "ESL·IELTS·TOEIC·Business 다양한 과정", "국적 다양성", "대형 수영장·헬스장·도서관", "할랄 식단 제공", "온캠퍼스 기숙사"],
+  weaknesses: ["IT Park 접근성은 떨어짐", "학비가 저렴한 편은 아님", "세미 스파르타로 일정 수준의 규율이 있음"],
+  recommendedFor: ["IELTS 목표 점수가 있는 학생", "시설을 중요하게 생각하는 사람", "시험과 회화를 함께 준비하는 사람", "리조트형 캠퍼스를 선호하는 사람", "장기연수"],
+  notRecommendedFor: ["도심 생활을 가장 중요하게 생각하는 사람", "초저예산 연수를 원하는 사람"],
+
+  dailySchedule: ["07:20 Daily Test", "08:00 1:1", "09:00 1:1", "10:00 Small Group", "11:00 Medium Group", "12:00 Lunch", "13:00 1:1", "14:00 1:1", "15:00 Large Group", "16:00 Elective / Clinic", "17:00 Self Study"],
+  nearby: ["Mactan Newtown", "Mactan Beaches", "Restaurants", "Coffee Shops", "Resorts", "Mactan International Airport"],
+  faq: [
+    { question: "공식 IELTS 시험을 학교에서 볼 수 있나요?", answer: "네. CIA는 공식 IDP IELTS Testing Center를 운영합니다." },
+    { question: "기숙사는 캠퍼스 안에 있나요?", answer: "네. 모든 기숙사는 온캠퍼스 형태입니다." },
+    { question: "하루 수업량은 어느 정도인가요?", answer: "기본 ESL 과정은 1:1 4교시와 그룹수업 4교시로 구성됩니다." },
+    { question: "식사는 어떤가요?", answer: "국제식과 할랄 식단을 함께 제공합니다." },
+  ],
+  reviewSummary: "세부 최고 수준의 시설과 IELTS 준비 강점, 다양한 국적 구성이 강점으로 꼽힘.",
+  reviewPositives: ["시설이 세부 최고 수준", "IELTS 준비에 강하다", "선생님 수준이 높다", "국적 구성이 다양하다", "기숙사가 깨끗하다"],
+  reviewNegatives: ["시내 이동 시간이 있다", "비용이 다소 높은 편", "성수기에는 학생 수가 많다"],
+
+  sources: [
+    { title: "CIA 공식 홈페이지", url: "https://www.cebucia.com", type: "official" },
+    { title: "CIA 학교 소개 (3D Academy 가이드)", url: "https://3d-universal.com/en/blogs/cebu-international-academy.html", type: "blog" },
+  ],
+  lastUpdated: "2026-07-22",
+});

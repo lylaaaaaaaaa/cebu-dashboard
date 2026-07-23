@@ -1,0 +1,6 @@
+import { BookOpenText, Globe2, MessageCircle, Play } from "lucide-react";
+import type { RankedSchool, SourceLink } from "@/types/school";
+import { SourceCard } from "./source-card";
+
+const groups: Array<{ type: SourceLink["type"]; label: string; icon: React.ReactNode }> = [{ type: "official", label: "공식 홈페이지", icon: <Globe2 size={14} /> }, { type: "blog", label: "블로그", icon: <BookOpenText size={14} /> }, { type: "community", label: "커뮤니티", icon: <MessageCircle size={14} /> }, { type: "youtube", label: "YouTube 후기", icon: <Play size={14} /> }];
+export function ReviewCollection({ school }: { school: RankedSchool }) { return <div><div className="grid gap-3 sm:grid-cols-2">{groups.map((group) => { const sources = school.sources.filter((source) => source.type === group.type); return <div key={group.label} className="rounded-xl border border-[var(--line)] p-3"><div className="mb-3 flex items-center gap-2 text-xs font-bold">{group.icon}{group.label}<span className="ml-auto text-[10px] text-[var(--muted)]">{sources.length}개</span></div>{sources.length ? <div className="space-y-2">{sources.map((source) => <SourceCard key={source.url} source={source} />)}</div> : <span className="text-[11px] text-[var(--muted)]">준비 중</span>}</div>; })}</div></div>; }
