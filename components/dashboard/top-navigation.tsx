@@ -1,7 +1,14 @@
-import { Bell, Command, Menu, Moon, Search, Sun } from "lucide-react";
+import { Moon, Search, Sun } from "lucide-react";
+import { Brand } from "./brand";
 
-type TopNavigationProps = { active: string; dark: boolean; query: string; onMenuOpen: () => void; onQueryChange: (value: string) => void; onThemeToggle: () => void };
+type TopNavigationProps = { dark: boolean; query: string; onQueryChange: (value: string) => void; onThemeToggle: () => void };
 
-export function TopNavigation({ active, dark, query, onMenuOpen, onQueryChange, onThemeToggle }: TopNavigationProps) {
-  return <header className="topbar"><div className="flex items-center gap-3"><button type="button" aria-label="메뉴 열기" className="icon-button lg:hidden" onClick={onMenuOpen}><Menu size={20} /></button><div className="hidden items-center gap-2 text-[12px] text-[var(--muted)] sm:flex"><Command size={14} />워크스페이스 <span>/</span><span className="font-semibold text-[var(--ink)]">{active}</span></div><span className="text-[13px] font-semibold sm:hidden">{active}</span></div><div className="flex items-center gap-1.5"><label className="search-box hidden md:flex"><Search size={15} /><input value={query} onChange={(event) => onQueryChange(event.target.value)} placeholder="어학원 검색" aria-label="어학원 검색" /><kbd>⌘ K</kbd></label><button type="button" aria-label="검색" className="icon-button md:hidden"><Search size={17} /></button><button type="button" aria-label="알림" className="icon-button relative"><Bell size={17} /><span className="absolute right-1.5 top-1.5 size-1.5 rounded-full bg-[#e1a734]" /></button><button type="button" aria-label={`${dark ? "라이트" : "다크"} 모드로 전환`} onClick={onThemeToggle} className="icon-button">{dark ? <Sun size={17} /> : <Moon size={17} />}</button><div className="mx-1 h-5 w-px bg-[var(--line)]" /><div className="grid size-7 place-items-center rounded-full bg-[#d5e4ee] text-[10px] font-bold text-[#42677b]">AK</div></div></header>;
+export function TopNavigation({ dark, query, onQueryChange, onThemeToggle }: TopNavigationProps) {
+  return <header className="topbar">
+    <Brand />
+    <div className="flex items-center gap-1.5">
+      <label className="search-box flex"><Search size={15} /><input value={query} onChange={(event) => onQueryChange(event.target.value)} placeholder="어학원 검색" aria-label="어학원 검색" /></label>
+      <button type="button" aria-label={`${dark ? "라이트" : "다크"} 모드로 전환`} onClick={onThemeToggle} className="icon-button">{dark ? <Sun size={17} /> : <Moon size={17} />}</button>
+    </div>
+  </header>;
 }

@@ -8,7 +8,7 @@ body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans
 button,input { font:inherit; } button { cursor:pointer; }
 button:focus-visible,input:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
 .display { font-family:"Space Grotesk",sans-serif; }
-.app-grid { min-height:100vh; display:grid; grid-template-columns:248px minmax(0,1fr); }
+.app-grid { min-height:100vh; }
 .sidebar { border-right:1px solid var(--line); background:rgba(255,255,255,.66); }
 .main-content { min-width:0; }
 .content-wrap { max-width:1440px; margin:0 auto; padding:38px 48px 64px; }
